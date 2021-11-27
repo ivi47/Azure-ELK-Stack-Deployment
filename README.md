@@ -113,3 +113,11 @@ In order to use the playbook, you will need to have an Ansible control node alre
 	'nano elk-ansible_playbook.yml'
 	```
 - Repeat previous step for the filebeat playbook as well.
+- Finally, run your ansible playbooks against the desired hosts.
+	```
+	'ansible-playbook <playbook> <host> 
+	```
+	For example:
+		```
+		'ansible-playbook install-elk.yml elk'
+		```
