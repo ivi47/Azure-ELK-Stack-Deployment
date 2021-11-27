@@ -213,11 +213,11 @@ In order to use the playbook, you will need to have an Ansible control node alre
 	```
 	# Line 20
 	[webservers]
-	10.0.0.5 ansible_python_interpreter=/usr/bin/python3
-	10.0.0.6 ansible_python_interpreter=/usr/bin/python3
+	**web-1-ip** ansible_python_interpreter=/usr/bin/python3
+	**web-2-ip** ansible_python_interpreter=/usr/bin/python3
 
 	[elk]
-	10.1.0.4 ansible_python_interpreter=/usr/bin/python3
+	**elkstack-ip** ansible_python_interpreter=/usr/bin/python3
 	```
 	
 - Edit your elk-ansible_playbook.yml file to include your specific target host (created in previous step).
