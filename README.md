@@ -92,14 +92,24 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 - Access your Ansible Control Node and cd into your /etc/ansible dir.
-- Git clone this repo using the command:```
-	'git clone https://github.com/iviay/projects.git' ```
+- Git clone this repo using the command:
+	```
+	'git clone https://github.com/iviay/projects.git' 
+	```
 - Next copy the ELK playbook from the projects/ansible/elk-ansible/elk-ansible_playbook.yml into /etc/ansible:
-	```'cp projects/ansible/elk-ansible/elk-ansible_playbook.yml /etc/ansible'```
-- Repeat previous step for filebeat and metricbeat playbooks too.```
-	'cp projects/ansible/filebeat-ansible_playbook.yml /etc/ansible'```
-- Create or update the hosts file under /etc/ansible to include your target hosts (they will later be called in the playbook).```
-	To create or update: 'nano hosts' in the /etc/ansible dir.```
-- Edit your elk-ansible_playbook.yml file to include your specific target host (created in previous step).```
-	'nano elk-ansible_playbook.yml'```
+	```
+	'cp projects/ansible/elk-ansible/elk-ansible_playbook.yml /etc/ansible'
+	```
+- Repeat previous step for filebeat and metricbeat playbooks too.
+	```
+	'cp projects/ansible/filebeat-ansible_playbook.yml /etc/ansible'
+	```
+- Create or update the hosts file under /etc/ansible to include your target hosts (they will later be called in the playbook).
+	```
+	To create or update: 'nano hosts' in the /etc/ansible dir.
+	```
+- Edit your elk-ansible_playbook.yml file to include your specific target host (created in previous step).
+	```
+	'nano elk-ansible_playbook.yml'
+	```
 - Repeat previous step for the filebeat playbook as well.
