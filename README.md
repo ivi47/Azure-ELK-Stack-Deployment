@@ -155,20 +155,20 @@ In order to use the playbook, you will need to have an Ansible control node alre
 - Access your Ansible Control Node and cd into your /etc/ansible dir.
 - Git clone this repo using the command:
 	```
-	'git clone https://github.com/iviay/projects.git' 
+	git clone https://github.com/iviay/projects.git
 	```
 - Next copy the ELK playbook from the projects/ansible/elk-ansible/elk-ansible_playbook.yml into /etc/ansible:
 	```
-	'cp projects/ansible/elk-ansible/elk-ansible_playbook.yml /etc/ansible'
+	cp projects/ansible/elk-ansible/elk-ansible_playbook.yml /etc/ansible
 	```
 - Repeat previous step for filebeat and metricbeat playbooks too.
 	```
-	'cp projects/ansible/filebeat-ansible_playbook.yml /etc/ansible'
-	'cp projects/ansible/metricbeat-ansible_playbook.yml /etc/ansible'
+	cp projects/ansible/filebeat-ansible_playbook.yml /etc/ansible
+	cp projects/ansible/metricbeat-ansible_playbook.yml /etc/ansible
 	```
-- Create or update the hosts file under /etc/ansible to include your target hosts (they will later be called in the playbook or when running the playbook).
+- Create or update the hosts file under /etc/ansible to include your target hosts (they will later be called by the 'host' variable in your playbook).
 	```
-	'nano hosts.txt'
+	nano hosts.txt
 	```
 	```
 	[webservers]
@@ -181,14 +181,14 @@ In order to use the playbook, you will need to have an Ansible control node alre
 	
 - Edit your elk-ansible_playbook.yml file to include your specific target host (created in previous step).
 	```
-	'nano elk-ansible_playbook.yml'
+	nano elk-ansible_playbook.yml
 	```
 - Repeat previous step for the filebeat playbook as well.
 - Finally, run your ansible playbooks against the desired hosts.
 	```
-	'ansible-playbook <playbook> <host> 
+	ansible-playbook <playbook> 
 	```
 	For example:
 		```
-		'ansible-playbook install-elk.yml elk'
+		'ansible-playbook install-elk.yml'
 		```
