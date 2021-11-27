@@ -149,7 +149,7 @@ We have installed the following Beats on these machines:
 These Beats allow us to collect the following information from each machine:
 - Depending on the enabled modules, Filebeat will analyze and collect changes to file systems within the host. For example, with the Apache module enabled, web logs containing data such as visit history were being indexed and sent to Kibana for display. Metricbeat on the other hand, detects and logs changes in system, performance, and health metrics. With the 'Docker metrics' module enabled, metricbeat will collect data regarding CPU usage, healthcheck, memory, etc.
 
-Below is the playbook code for installing and running Metricbeat on the 'webservers' host group.
+Below is the ansible code for installing, configuring & running Metricbeat on the 'webservers' host group.
 ```YAML
 ---
   - name: Install metric beat
