@@ -232,5 +232,6 @@ In order to use the playbook, you will need to have an Ansible control node alre
 		```
 		'ansible-playbook install-elk.yml'
 		```
-Visit http://<elk-vm-ip>:5601/app/kibana to verify successful deployment & access to the Kibana Dashboard.
-	- ![Kibana-Dashboard](/ansible/images/kibana-dashboard.png)
+		
+Make sure to visit http://<elk-vm-ip>:5601/app/kibana to verify successful deployment & access to the Kibana Dashboard.
+	![Kibana-Dashboard](/ansible/images/kibana-dashboard.png)
