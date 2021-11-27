@@ -94,8 +94,8 @@ In order to use the playbook, you will need to have an Ansible control node alre
 - Access your Ansible Control Node and cd into your /etc/ansible dir.
 - Git clone this repo using the command:```
 	'git clone https://github.com/iviay/projects.git' ```
-- Next copy the ELK playbook from the projects/ansible/elk-ansible/elk-ansible_playbook.yml into /etc/ansible:```
-	'cp projects/ansible/elk-ansible/elk-ansible_playbook.yml /etc/ansible'```
+- Next copy the ELK playbook from the projects/ansible/elk-ansible/elk-ansible_playbook.yml into /etc/ansible:
+	```'cp projects/ansible/elk-ansible/elk-ansible_playbook.yml /etc/ansible'```
 - Repeat previous step for filebeat and metricbeat playbooks too.```
 	'cp projects/ansible/filebeat-ansible_playbook.yml /etc/ansible'```
 - Create or update the hosts file under /etc/ansible to include your target hosts (they will later be called in the playbook).```
