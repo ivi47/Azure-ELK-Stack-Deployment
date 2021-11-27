@@ -5,7 +5,7 @@ Repository dedicated to personal projects and pieces of work.
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
+![ElkStack Cloud Topology](/ansible/diagrams/ElkStack-CloudTopology3.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
