@@ -211,6 +211,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 	nano hosts.txt
 	```
 	```
+	# Line 20
 	[webservers]
 	10.0.0.5 ansible_python_interpreter=/usr/bin/python3
 	10.0.0.6 ansible_python_interpreter=/usr/bin/python3
