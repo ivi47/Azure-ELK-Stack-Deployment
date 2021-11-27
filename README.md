@@ -149,6 +149,46 @@ We have installed the following Beats on these machines:
 These Beats allow us to collect the following information from each machine:
 - Depending on the enabled modules, Filebeat will analyze and collect changes to file systems within the host. For example, with the Apache module enabled, web logs containing data such as visit history were being indexed and sent to Kibana for display. Metricbeat on the other hand, detects and logs changes in system, performance, and health metrics. With the 'Docker metrics' module enabled, metricbeat will collect data regarding CPU usage, healthcheck, memory, etc.
 
+Below is the playbook code for installing and running Metricbeat on the 'webservers' host group.
+```
+---
+  - name: Install metric beat
+    hosts: webservers
+    become: true
+    tasks:
+      # Use command module
+    - name: Download metricbeat
+      command: curl -L -O artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.4.0-amd64.deb
+
+      # Use command module
+    - name: install metricbeat
+      command: dpkg -i metricbeat-7.4.0-amd64.deb
+
+      # Use copy module
+    - name: drop in metricbeat config
+      copy:
+        src: /etc/ansible/files/metricbeat-config.yml
+        dest: /etc/metricbeat/metricbeat.yml
+
+      # Use command module
+    - name: enable and configure docker module for metric beat
+      command: metricbeat modules enable docker
+
+      # Use command module
+    - name: setup metric beat
+      command: metricbeat setup
+
+      # Use command module
+    - name: start metric beat
+      command: service metricbeat start
+
+      # Use systemd module
+    - name: enable service metricbeat on boot
+      systemd:
+        name: metricbeat
+        enabled: yes
+```
+
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
