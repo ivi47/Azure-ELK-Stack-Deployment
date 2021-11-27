@@ -103,6 +103,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 - Repeat previous step for filebeat and metricbeat playbooks too.
 	```
 	'cp projects/ansible/filebeat-ansible_playbook.yml /etc/ansible'
+	'cp projects/ansible/metricbeat-ansible_playbook.yml /etc/ansible'
 	```
 - Create or update the hosts file under /etc/ansible to include your target hosts (they will later be called in the playbook).
 	```
