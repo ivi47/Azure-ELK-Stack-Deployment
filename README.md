@@ -166,10 +166,19 @@ In order to use the playbook, you will need to have an Ansible control node alre
 	'cp projects/ansible/filebeat-ansible_playbook.yml /etc/ansible'
 	'cp projects/ansible/metricbeat-ansible_playbook.yml /etc/ansible'
 	```
-- Create or update the hosts file under /etc/ansible to include your target hosts (they will later be called in the playbook).
+- Create or update the hosts file under /etc/ansible to include your target hosts (they will later be called in the playbook or when running the playbook).
 	```
-	To create or update: 'nano hosts' in the /etc/ansible dir.
+	'nano hosts.txt'
 	```
+	```
+	[webservers]
+	10.0.0.5 ansible_python_interpreter=/usr/bin/python3
+	10.0.0.6 ansible_python_interpreter=/usr/bin/python3
+
+	[elk]
+	10.1.0.4 ansible_python_interpreter=/usr/bin/python3
+	```
+	
 - Edit your elk-ansible_playbook.yml file to include your specific target host (created in previous step).
 	```
 	'nano elk-ansible_playbook.yml'
